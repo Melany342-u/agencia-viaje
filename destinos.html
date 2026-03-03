@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>✈️ Destinos del mundo - Destinos </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        .contenedor-destino {
+            height: 300px;
+        }
+
+      body {
+             overflow-x: hidden;
+        }
+
+        .bi-check-circle-fill {
+            color: green;
+        }
+
+     
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg  bg-primary navbar-dark fixed-top ">
+            <div class="container-fluid ps-5">
+                <a class="navbar-brand" href="#Inicio">
+                    <i class="bi bi-airplane-fill"></i> Destinos del mundo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse pe-5" id="navbarNav">
+                    <ul class="navbar-nav  ms-auto align-items-center ">
+                        <li class="nav-item ">
+                            <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link  active" href="destinos.html">Destinos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <!--BOTóN-->
+                            <!-- Button trigger modal -->
+                            <div class="p-2">
+                                <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    <i class="bi bi-calendar-minus"></i> Reservar
+                                    ahora
+                                </button>
+                            </div>
+                            <!--FIN BOTÓN-->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+       
+    </header>
+    <main>
+        <!--1º SECCIÓN-->
+        <section class="contenedor-destino text-center  align-items-center p-auto bg-primary pt-2 mb-0">
+            <div class="container mt-5 ">
+                <h1 class="display-3 fw-bold text-light">Nuestros destinos</h1>
+                <h5 class="lead mb-5 text-light fw-light">Encuentra tu próxima aventura</h5>
+            </div>
+        </section>
+        <!--FIN 1º SECCION-->
+        <!--FILTROS-->
+        <div class="container-fluid p-5 bg-light ">
+            <form class="row gy-1 gx-3 align-items-center p-4">
+                <div class="  col-sm-6 col-lg-3">
+                    <label for="inputCity" class="form-label">Tipo de destino</label>
+                    <select class="form-select" id="inlineFormSelectPref">
+                        <option selected>Todos</option>
+                        <option value="1">Playa</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+
+                <div class=" col-sm-6 col-lg-3">
+                    <label for="inputCity" class="form-label">Continente</label>
+                    <select class="form-select" id="inlineFormSelectPref">
+                        <option selected>Todos</option>
+                        <option value="1">América</option>
+                        <option value="2">Europa</option>
+                        <option value="3">África</option>
+                        <option value="3">Asia</option>
+                    </select>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <label for="inputPrice" class="form-label">Precio Máximo</label>
+                    <select class="form-select" id="inlineFormSelectPref">
+                        <option selected>Sin límite</option>
+                        <option value="1">Hasta €500</option>
+                        <option value="2">Hasta €1000</option>
+                        <option value="3">Hasta €1500</option>
+                        <option value="3">Hasta €2000</option>
+                    </select>
+                </div>
+                <div class="col-sm-6 col-lg-3  pt-4 d-grid ">
+                    <button type="submit" class="btn btn-lg btn-primary "><i
+                            class="bi bi-search text-light  pe-2"></i>Buscar</button>
+                </div>
+            </form>
+        </div>
+        <!--FIN FILTROS-->
+        <!--INICIO TABLA-->
+        <div class="container-fluid px-5 pb-5">
+            <div>
+                <h3 class="py-5">Comparativa de paquetes</h3>
+            </div>
+            <div class="table-responsive small">
+            <table class="table table-striped align-items-center table-sm">
+                <thead>
+                    <tr class="table-primary">
+                        <th scope="col"> Destino</th>
+                        <th scope="col"> Duración</th>
+                        <th scope="col"> Alojamiento</th>
+                        <th scope="col"> Vuelo</th>
+                        <th scope="col"> Comidas</th>
+                        <th scope="col"> Precio</th>
+                        <th scope="col"> Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">París, Francia <span class="badge text-bg-danger">Oferta</span></th>
+                        <td>7 días</td>
+                        <td><i class="bi bi-check-circle-fill pe-2"></i>Hotel 4 <i class="bi bi-star-fill ps-2"></i>
+                        </td>
+                        <td><i class="bi bi-check-circle-fill pe-2"></i>Incluido</td>
+                        <td>Desayuno</td>
+                        <td class="text-primary fw-bold">€840</td>
+                        <td><button type="button" class="btn btn-sm btn-primary py-0 " data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Reservar</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Phuket, Tailandia <span class="badge text-bg-success">Nuevo</span></th>
+                        <td>10 días</td>
+                        <td><i class="bi bi-check-circle-fill pe-2"></i>Resort 5<i class="bi bi-star-fill ps-2"></i>
+                        </td>
+                        <td><i class="bi bi-check-circle-fill pe-2"></i>Incluido</td>
+                        <td>Media pensión</td>
+                        <td class="text-primary fw-bold">€950</td>
+                        <td><button type="button" class="btn btn-sm btn-primary py-0" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Reservar</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Reikiavik, Islandia</th>
+                        <td>5 días</td>
+                        <td><i class="bi bi-check-circle-fill pe-2"></i>Hotel 3<i class="bi bi-star-fill ps-2"></i></td>
+                        <td><i class="bi bi-check-circle-fill pe-2"></i>Incluido</td>
+                        <td>Solo alojamiento</td>
+                        <td class="text-primary fw-bold">€1450</td>
+                        <td><button type="button" class="btn btn-sm btn-primary py-0" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Reservar</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tokio, Japón <span class="badge text-bg-info">Popular</span></th>
+                        <td>12 días</td>
+                        <td><i class="bi bi-check-circle-fill pe-2"></i>Hotel 4<i class="bi bi-star-fill ps-2"></i></td>
+                        <td><i class="bi bi-check-circle-fill pe-2"></i>Incluido</td>
+                        <td>Desayuno</td>
+                        <td class="text-primary fw-bold">€1650</td>
+                        <td><button type="button" class="btn btn-sm btn-primary py-0" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Reservar</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Maldivas <span class="badge text-bg-warning">Premium</span></th>
+                        <td>8 días</td>
+                        <td><i class="bi bi-check-circle-fill pe-2"></i>Villa 5<i class="bi bi-star-fill ps-2"></i></td>
+                        <td><i class="bi bi-check-circle-fill pe-2"></i>Business Class</td>
+                        <td>Todo incluido</td>
+                        <td class="text-primary fw-bold">€2000</td>
+                        <td><button type="button" class="btn btn-sm btn-primary py-0" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Reservar</button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Machu Picchu</th>
+                        <td>9 días</td>
+                        <td><i class="bi bi-check-circle-fill pe-2"></i>Hotel 3<i class="bi bi-star-fill ps-2"></i></td>
+                        <td><i class="bi bi-check-circle-fill pe-2"></i>Incluido</td>
+                        <td>Desayuno</td>
+                        <td class="text-primary fw-bold">€1100</td>
+                        <td><button type="button" class="btn btn-sm btn-primary py-0" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Reservar</button></td>
+                    </tr>
+                </tbody>
+
+            </table>
+            </div>
+
+        </div>
+        <!--FIN TABLA-->
+    </main>
+
+
+    <!-- place footer here -->
+    <footer class="container-fluid  py-5  bg-dark text-light">
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4 pt-2">
+                <div class="d-flex ">
+                    <a href="#Inicio" class="d-flex mb-3 link-dark text-decoration-no-one">
+                        <i class="bi bi-airplane-fill pe-3 text-light"></i><h6 class=" fw-bold text-light">Destinos del mundo </h6>
+                    </a>
+                    
+                </div>
+                <p class="text-secondary ">Tu agencia de confianza para vivir experiencias inolvidables
+                    alrededor
+                    del mundo.</p>
+                <div class="d-flex ">
+                    <i class="bi bi-facebook pe-2 text-light " ></i>
+                    <i class="bi bi-instagram px-2 text-light "></i>
+                    <i class="bi bi-twitter px-2 text-light "></i>
+                    <i class="bi bi-youtube ps-2 text-light "></i>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 pt-2">
+                <h6 class="fw-bold">Enlaces rápidos</h6>
+                <div class="pt-2">
+                    <ul class="nav flex-column">
+                        <li class=" nav-item pb-2">
+                            <a href="#Inicio" class="nav-link  p-0 link-light text-secondary">
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="nav-item pb-2 ">
+                            <a href="destinos.html" class="nav-link p-0 link-light text-secondary">
+                                Destinos
+                            </a>
+                        </li>
+                        <li class="nav-item pb-2  ">
+                            <a href="contacto.html" class="nav-link p-0 link-light text-secondary">
+                                Contacto
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="" class="nav-link p-0 link-light text-secondary">
+                                Sobre nosotros
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4 pt-2">
+                <p class="fw-bold">Contacto</p>
+                <div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="https://www.google.com/maps" class="nav-link p-0 link-light text-secondary">
+                                <i class="bi bi-geo-alt-fill pe-2"></i>Calle Falsa 123, Madrid
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="contacto.html" class="nav-link p-0 link-light text-secondary">
+                                <i class="bi bi-telephone-fill pe-2"></i> +34 900 123 456
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="contacto.html" class="nav-link p-0 link-light text-secondary">
+                                <i class="bi bi-envelope-at-fill pe-2"></i> info@destinosdelmundo.com
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="contacto.html" class="nav-link p-0 link-light text-secondary">
+                                <i class="bi bi-clock-fill pe-2"></i> Lun-Vie: 9:00 - 20:00
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-11 mx-auto mt-4">
+            <div class="d-flex flex-column flex-sm-row justify-content-center border-top ">
+                <p class="text-center pt-2 text-secondary">© 2023 Company, Inc. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal del navegador-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h1 class="modal-title fs-5 fw-bold text-light" id="exampleModalLabel"><i
+                                class="bi bi-calendar-check text-light p-2"></i>Reserva rápida</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!--FORMULARIO-->
+                        <form>
+                            <div class="mb-3">
+                                <label for="validationCustomUsername" class="form-label">Nombre completo *</label>
+                                <input type="text" class="form-control" id="validationCustomUsername"
+                                        aria-describedby="inputGroupPrepend" required>
+                                   
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email *</label>
+                                <div class="input-group has-validation">
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="name@example.com" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Destino *</label>
+                                <select class="form-select" aria-label="Default select example" required>
+                                    <option selected disabled value="">Selecciona un destino</option>
+                                    <option value="1">París, Francia</option>
+                                    <option value="2">Phuket, Tailandia</option>
+                                    <option value="3">Reikiavik, Islandia</option>
+                                    <option value="3">Tokio, Japón</option>
+                                    <option value="3">Maldivas</option>
+                                    <option value="3">Machu Picchu, Perú</option>
+                                </select>
+                            </div>
+                            <div class="row mb-3 d-flex justify-content-between ">
+                                <div class="col-md-6">
+                                    <label for="recipient-name" class="col-form-label ">Fecha de viaje *</label>
+                                    <input type="date" class="form-control" id="date" required>
+                                    <div class="invalid-feedback">Por favor, seleccione una fecha.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="number" class="col-form-label ">Personas *</label>
+                                    <input type="number" class="form-control " id="number" required>
+
+                                </div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                                <label class="form-check-label" for="exampleCheck1">Acepto los términos y
+                                    condiciones</label>
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Enviar reserva</button>
+                        </form>
+                        <!--FIN FORMULARIO-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--fin modal-->
+
+
+    
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
